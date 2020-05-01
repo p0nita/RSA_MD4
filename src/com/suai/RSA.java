@@ -80,7 +80,7 @@ public class RSA {
     public BigInteger getHash(BigInteger m){
         BigInteger res = BigInteger.valueOf(0);
         try {
-            MessageDigest md = MessageDigest.getInstance("MD5");
+            MessageDigest md = MessageDigest.getInstance("SHA1");
             md.update(m.toByteArray());
             res = new BigInteger(md.digest());
         }
